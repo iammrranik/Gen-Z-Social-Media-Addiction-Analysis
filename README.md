@@ -10,7 +10,7 @@
 
 ## ✨ Status
 🚧 **Completed**  
-🧠 Built with Python, Pandas, NumPy, and Matplotlib  
+🧠 Built with Python, Pandas, NumPy and Matplotlib  
 📊 Analyzes a massive 1,000,000-row dataset  
 🎯 Designed for Final Term Evaluation  
 
@@ -18,7 +18,18 @@
 
 ## 📊 Project Overview
 
-This project investigates the patterns of social media addiction among Gen-Z users (ages 18-25) using a large-scale dataset. The primary goal is to identify how specific usage behaviors—such as daily hours, platform variety, and night usage—correlate with mental health and perceived addiction levels. The project guarantees data integrity through rigorous cleaning and uses statistical modeling to determine how screen time habits impact overall well-being.
+This project investigates the patterns of social media addiction among Gen-Z users (ages 18-25) using a large-scale dataset. The primary goal is to identify how specific usage behaviors—such as daily hours, platform variety and night usage—correlate with mental health and perceived addiction levels. The project guarantees data integrity through rigorous cleaning and uses statistical modeling to determine how screen time habits impact overall well-being.
+
+---
+
+### 🔍 Core Research Questions & Answers
+
+* **Research Question 1:** Is there a statistically significant relationship between a Gen-Z individual's daily usage hours and their mental health score?
+    * **Answer:** Yes, a clear inverse relationship exists. Users with the lowest mental health scores (1.16–2.29) spend an average of 5.4 to 5.9 hours daily online, whereas those with the highest mental health score (10.00) engage significantly less, averaging just 1.8 to 2.5 hours per day.
+* **Research Question 2:** Are the 'addicted' users actually less happy or is everyone feeling about the same regardless of their screen time?
+    * **Answer:** Addicted users report a measurable decline in well-being. Individuals categorized under "Low" addiction levels maintain high average mental health scores above 8.0, whereas individuals under "High" addiction levels see their scores drop significantly below 6.0.
+* **Research Question 3:** Is the 'average' Gen-Z user's social media habit actually common or are most people either using it very little or way too much?
+    * **Answer:** Digital behaviors cluster heavily around a central norm rather than polarizing into extremes. The majority of Gen-Z users consistently engage for 3 to 4 hours daily, proving that moderate screen usage is the dominant standard behavioral pattern rather than a stark split between non-users and heavy addicts.
 
 ---
 
@@ -28,7 +39,7 @@ This project investigates the patterns of social media addiction among Gen-Z use
 - ⚙️ **Feature Engineering:** Developed custom variables like `addiction_number` and `usage_intensity` to quantify qualitative labels. Engineered a weighted `addiction_risk` score that heavily penalizes late-night usage.
 - 📉 **Statistical Analysis:** Conducted ANOVA and Chi-Square tests to validate findings. Proved that addiction level is a definitive driver of both digital habits and psychological distress.
 - 🧠 **Mental Health Correlation:** Revealed a clear inverse relationship between digital habits and well-being, where users with high addiction levels reported significant drops in their mental health scores.
-- 📊 **Visualizations:** Created comprehensive frequency histograms, correlation heatmaps, and bar charts to directly answer the core research questions.
+- 📊 **Visualizations:** Created comprehensive frequency histograms, correlation heatmaps and bar charts to directly answer the core research questions.
 
 ---
 
@@ -47,7 +58,7 @@ This project investigates the patterns of social media addiction among Gen-Z use
 ## 🗂️ Analysis Pipeline
 
 1. **Data Loading:** Automatically downloads the `gen-z-social-media-usage-dataset` from Kaggle using `kagglehub`.
-2. **Preprocessing:** Handles deduplication, dimension masking (filtering for valid 18-25 age ranges), and percentile-based outlier trimming.
+2. **Preprocessing:** Handles deduplication, dimension masking (filtering for valid 18-25 age ranges) and percentile-based outlier trimming.
 3. **Feature Generation:** Translates categorical addiction levels to numeric scores using dictionary mapping. Calculates risk weights conditionally based on night usage via `np.where`.
 4. **Statistical Testing:** Groups data by addiction increments to calculate average mental health and satisfaction metrics.
 5. **Visualization:** Generates dynamic plots to illustrate usage distribution and mental health correlations.
